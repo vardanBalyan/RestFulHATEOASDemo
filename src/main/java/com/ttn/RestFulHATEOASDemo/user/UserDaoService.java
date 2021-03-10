@@ -14,9 +14,9 @@ public class UserDaoService {
     private int userCount=3;
     UserDaoService()
     {
-        userList.add(new User(1,"vardan",23));
-        userList.add(new User(2,"shubham",22));
-        userList.add(new User(3,"abhay",26));
+        userList.add(new User(1,"vardan",23, "abc"));
+        userList.add(new User(2,"shubham",22, "abc"));
+        userList.add(new User(3,"abhay",26, "abc"));
     }
 
     public List<User> fetchAllUsers()
@@ -40,6 +40,15 @@ public class UserDaoService {
                 userIterator.remove();
                 return user;
             }
+        }
+        return null;
+    }
+
+    public User returnOneUser(int id)
+    {
+        for (User user: userList) {
+            if(user.getId() == id)
+                return user;
         }
         return null;
     }

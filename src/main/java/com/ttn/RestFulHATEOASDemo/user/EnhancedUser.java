@@ -1,18 +1,15 @@
 package com.ttn.RestFulHATEOASDemo.user;
 
-import com.fasterxml.jackson.annotation.JsonFilter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.hibernate.validator.constraints.Range;
 
-import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 //@JsonFilter("userFilter")
 @ApiModel(description = "user class contains all the structure of the user")
-public class User {
+public class EnhancedUser {
 
     private int id;
     @Size(min = 3)
@@ -23,12 +20,14 @@ public class User {
     private int age;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
+    private String nationality;
 
-    public User(int id, String name, int age, String password) {
+    public EnhancedUser(int id, String name, int age, String password,String nationality) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.password = password;
+        this.nationality = nationality;
     }
 
     public int getId() {
@@ -37,6 +36,14 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
     }
 
     public String getPassword() {
