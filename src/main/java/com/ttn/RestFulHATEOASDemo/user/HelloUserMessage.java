@@ -16,6 +16,8 @@ public class HelloUserMessage {
     @Autowired
     private MessageSource messageSource;
 
+    /*
+    * return hello username in native language for the value passed in header*/
     @GetMapping(path = "/hello-user/{name}")
     public String helloUser(@RequestHeader( name = "Accept-Language",required = false)
                                         Locale locale, @PathVariable String name)

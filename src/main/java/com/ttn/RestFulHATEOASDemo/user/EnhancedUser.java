@@ -7,7 +7,8 @@ import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.Size;
 
-//@JsonFilter("userFilter")
+/*
+* User class with enhanced functionality*/
 @ApiModel(description = "user class contains all the structure of the user")
 public class EnhancedUser {
 

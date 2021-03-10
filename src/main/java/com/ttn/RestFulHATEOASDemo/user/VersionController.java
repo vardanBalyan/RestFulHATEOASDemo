@@ -3,6 +3,8 @@ package com.ttn.RestFulHATEOASDemo.user;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/*
+* rest controller for version control of api*/
 @RestController
 public class VersionController {
 

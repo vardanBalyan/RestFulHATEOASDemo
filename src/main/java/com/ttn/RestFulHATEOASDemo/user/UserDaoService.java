@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/*
+* provide service for the user class*/
 @Component
 public class UserDaoService {
 
@@ -18,6 +20,7 @@ public class UserDaoService {
         userList.add(new User(2,"shubham",22, "abc"));
         userList.add(new User(3,"abhay",26, "abc"));
     }
+
 
     public List<User> fetchAllUsers()
     {
