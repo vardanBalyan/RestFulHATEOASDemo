@@ -24,7 +24,7 @@ public class RestFulHateoasDemoApplication {
 	{
 		//SessionLocaleResolver localeResolver = new SessionLocaleResolver();
 		AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
-		localeResolver.setDefaultLocale(Locale.UK);
+		localeResolver.setDefaultLocale(Locale.US);
 		return localeResolver;
 	}
 

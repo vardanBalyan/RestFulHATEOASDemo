@@ -19,10 +19,7 @@ import java.util.List;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-@Api(tags = {"UserResource"})
-@SwaggerDefinition(tags = {
-        @Tag(name = "UserResource", description = "Write description here")
-})
+@Api(description = "provides rest apis for the user class")
 @RestController
 public class UserResource {
 
@@ -75,6 +72,8 @@ public class UserResource {
             throw new UserNotFoundException("User does not exist.");
     }
 
+    /*
+    * display a specific user and also link to all users using HATEOAS*/
     @GetMapping(path = "/user/{id}")
     public EntityModel<User> getSpecificUser(@PathVariable int id)
     {

@@ -22,6 +22,8 @@ public class GoodMorningMessage {
         return "Good Morning!!";
     }
 
+    /*
+    * returns good morning string for the language passed in header*/
     @GetMapping(path = "/good-morning-international")
     public String goodMorningInternationalization()
     {
